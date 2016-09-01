@@ -43,6 +43,9 @@ Remember to keep track of the array length, that is not tracked in the type leve
 ```cpp
 int arr[5]; // Declare
 int arr[5] = {1,2,3,4,5}; // Declare & Initialize
+
+// The safe way of initializing arrays in C++; it does bound checks
+std::array<int,5> arr;
 ```
 
 #### Java:
@@ -135,6 +138,9 @@ free(arr);
 // ALWAYS FREE MEMORY YOU ALLOCATE. THE LANGUAGE WILL NOT DO THIS FOR YOU
 // (Most profs hate it and will cut you, and your grade for it)
 ```
+If you have structs with pointers (like a binary tree), make sure you follow down the branches and delete the nodes first before the root, unless you want dangling pointers lost in the void, and give code reviewers a reason to own a pitchfork under their desk. Java and most OOP languages will let you off the hook, but C/C++ could care less about lost pointers.
+
+Oh yeah and watch how you use `goto`. If you have second doubts about using it then there's probably a better way.
 
 ***
 
