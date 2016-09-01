@@ -126,13 +126,14 @@ arr = (int*)malloc(len * sizeof(int));
 //                               ^ one pointer level down from the type you are containing
 free(arr);
 
-// calloc zeroes out memory when allocating it
+// calloc zeroes out any memory leftovers when allocating
 
 arr = (int*)calloc(len, sizeof(int));
 
 free(arr);
 
-// ALWAYS FREE MEMORY YOU ALLOCATE. THE LANGUAGE WILL NOT DO THIS FOR YOU (Most profs hate it and will cut you, and your grade for it)
+// ALWAYS FREE MEMORY YOU ALLOCATE. THE LANGUAGE WILL NOT DO THIS FOR YOU
+// (Most profs hate it and will cut you, and your grade for it)
 ```
 
 ***
@@ -155,7 +156,7 @@ CC=gcc
 CFLAGS=-I. -O3
 ```
 
-To use constants in a rule, use `$(CONSTANT)`. Much like `#define` in C/C++, it will be replaced verbatim
+To use constants in a rule, use `$(CONSTANT)`. Much like a `#define` in C/C++, it will be replaced verbatim
 
 To have a literal dollar sign ($), do `$$`.
 
@@ -166,12 +167,12 @@ CC=gcc
 CFLAGS=-I. -O3
 
 smooth-criminal: michael_jackson.c lyrics.c
-    $(CC) -O smooth-criminal micheal_jackson.c lyrics.c $(CFLAGS)
+    $(CC) -O smooth-criminal michael_jackson.c lyrics.c $(CFLAGS)
 ```
 
 A good suggestion for beginners (like me) is to map your project on paper so you can visualize your source files and dependencies properly (very useful for more complex projects). It will most certainly prevent you from bashing your head on a wall in anger trying to figure out how to write your makefile rules.
 
-Note: Running `make` without arguments will run the first rule in the makefile
+Note: Running `$ make` without arguments will run the first rule in the makefile
 
 ### GCC
 
@@ -181,7 +182,7 @@ Note: Running `make` without arguments will run the first rule in the makefile
 | `-c`        | Only runs preprocess, compile, and assembly steps. | You get an assembly file for the given architecture used by the compiler (it varies by compiler, but for GCC it uses x86 or x86_64, depending on your OS) |
 | `-g`        | Generates source-level debug information | You can debug your shit now |
 | `-o <file>` | Names the file the executable will be written to | Your executable is not named `a.out` |
-| `-j<value>`   | Number of concurrent jobs to be done. Default is 1, and it is unlimited | You can do more shit at the same time. Usually not a big deal with smaller projects, but you can see some build speed increase on large projects. Recommended to never give a value higher than your logical core count (CPU thread count, not physical cores) <p> ** Set this too high a number and mechanical hard drives will beg for mercy when used with large projects ** |
+| `-j<value>`   | Number of concurrent jobs to be done. Default is 1, and it is unlimited | You can do more shit at the same time. Usually not a big deal with smaller projects, but you can see some build speed increase on large projects. Recommended to never give a value higher than your logical core count (CPU thread count, not physical cores) <p> **Set this too high a number and mechanical hard drives will beg for mercy when used with large projects** |
 
 #### Flags you will/should care about
 
@@ -201,7 +202,7 @@ Another bane of my existence. I'm writing this so I don't have to hunt down the 
 ### Creating a local repository (with terminal)
 
 1. `$ cd` into root of project
-2. Type `$ git init`. Git will create a `.git` directory if it works
+2. `$ git init`. Git will create a `.git` directory if it works
 3. `$ git add` to prepare ~~these humans for ascension~~ files for commit
 4. `$ git commit`
 
