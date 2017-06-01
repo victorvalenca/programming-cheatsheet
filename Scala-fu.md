@@ -4,7 +4,7 @@
 <hr>
 
 ## FizzBuzz
-Two implementations, but they work the same way. Big thank you to @Xe for her suggestion to use tuples!
+Two implementations, but they work the same way. Big thank you to [Xe](https://github.com/Xe) for her suggestion to use tuples!
 
 #### My version:
 ```scala
