@@ -16,6 +16,13 @@ def fizzbuzz(i:Int) = {
     case (_,_) => println(i)
     }
 }
+// And then...
+$(1 to 100).foreach(fizzbuzz)
+
+$ 1
+  2
+  fizz
+  ...
 ```
 
 #### Xe's version:
