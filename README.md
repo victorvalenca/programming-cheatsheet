@@ -71,7 +71,7 @@ arr = new int[10];
 | `type name [][];` | `name` is array of array of `type`             | `*((a+i)+j) = 5 // Works`</p>`a[i][j] = 5; // Equivalent`|
 | `type name();`    | Function `name` that returns `type`            | |
 | `type *name();`   | Function `name` that returns pointer to `type` | |
-| `type (*name)();` | Pointer to function `name` that returns `type`. A function pointer, yay!</p>A pointer to the first command of an array of CPU instructions (pretty much what a function is)</p>** Pointer arithmetic cannot be done on function pointers**                     | |
+| `type (*name)();` | Pointer to function `name` that returns `type`. A function pointer, yay!</p>A pointer to the first command of an array of CPU instructions (pretty much what a function is)</p>**Pointer arithmetic cannot be done on function pointers**                     | |
 |~~`type(*name)()[];`~~</p>`type (*name[])();`| `name` is a pointer to an array of functions (cannot be done)</p>Name is an array of pointer to functions.| |
 | `int *const p;`   | `p` is a constant pointer that returns `int`   | | |
 
