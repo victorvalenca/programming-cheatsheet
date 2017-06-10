@@ -94,7 +94,7 @@ val myMap = data.asInstanceOf[java.util.Map[String,String]]
 ```
 Now you have a Java map. One step at a time! Now you need to get yourself some conversion tools so you can change the sucker into a proper Scala map
 ```scala
-import scala.collection.Converters._
+import scala.collection.JavaConverters._
 ```
 And finally:
 ```scala
